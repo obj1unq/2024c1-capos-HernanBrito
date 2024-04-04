@@ -6,11 +6,13 @@ object rolando {
 	var capacidad = 2
 	const property artefactos =  #{}
 	var hogar = castilloDePiedra
+	const property historialDeArtefactos = []
 	
 	method agarrar(artefacto){
 		if(self.puedeAgregar()){
 			artefactos.add(artefacto)
 		}
+		historialDeArtefactos.add(artefacto)
 	}
 	
 	method puedeAgregar(){
@@ -37,5 +39,7 @@ object rolando {
 	method todasLasPosesiones(){
 		return artefactos.union(hogar.baul())
 	}
+	
+	
 	
 }
